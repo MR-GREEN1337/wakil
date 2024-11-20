@@ -1,0 +1,90 @@
+[tool.poetry]
+name = "ai-saas"
+version = "0.1.0"
+description = ""
+authors = ["mr-green1337 <islam.hachimi2003@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.111.0"
+uvicorn = {extras = ["standard"], version = "^0.30.1"}
+pre-commit = "^3.7.1"
+motor = "^3.4.0"
+pymongo = "^4.7.3"
+pydantic-settings = "^2.3.3"
+passlib = "^1.7.4"
+python-jose = {extras = ["cryptography"], version = "^3.3.0"}
+websockets = "^12.0"
+python-dotenv = "^1.0.1"
+fastapi-mail = "^1.4.1"
+langchain-openai = "^0.1.12"
+langchain-core = "^0.2.10"
+langchain-groq = "^0.1.6"
+qdrant-client = "^1.10.1"
+loguru = "^0.7.2"
+ipykernel = "^6.29.5"
+langchain-community = "^0.2.14"
+pymysql = "^1.1.1"
+psycopg2 = "^2.9.9"
+langgraph = "^0.2.15"
+stripe = "^10.9.0"
+pytest = "^8.3.2"
+pinecone-client = "^5.0.1"
+pytest-asyncio = "^0.24.0"
+trio = "^0.26.2"
+resend = "^2.4.0"
+aioboto3 = "^13.1.1"
+dill = "^0.3.8"
+bs4 = "^0.0.2"
+wikipedia = "^1.4.0"
+pillow = "^10.4.0"
+pypdf2 = "^3.0.1"
+docx = "^0.2.4"
+google = "^3.0.0"
+google-auth-oauthlib = "^1.2.1"
+google-api-python-client = "^2.147.0"
+
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.4.10"
+mypy = "^1.10.0"
+pre-commit = "^3.7.1"
+
+[tool.ruff]
+line-length=79
+target-version = 'py312'
+
+[tool.ruff.lint]
+select = [
+  # Pyflakes
+  "F",
+  # pycodestyle
+  "E4",
+  "E7",
+  "E9",
+  # isort
+  "I",
+  # pep8-naming
+  "N",
+]
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+mypy_path = "./src/"
+allow_untyped_globals = true
+check_untyped_defs = true
+disallow_any_decorated = true
+disallow_any_generics = true
+disallow_untyped_calls = true
+disallow_untyped_decorators = true
+disallow_untyped_defs = true
+ignore_missing_imports = false
+show_error_codes = true
+warn_return_any = true
+warn_unused_configs = true
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
